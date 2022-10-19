@@ -14,13 +14,15 @@ fun main(args: Array<String>) {
 //    println()
 //    Challenge.three()
 //    println()
+    Challenge.four()
+    println()
 }
 
 fun persons() {
-    var gary = Person("Gary", 51)
+    val gary = Person("Gary", 51)
     personStuff(gary, "Satya")
     //gary.age = 21
-    var mary = Person("Mary", 52)
+    val mary = Person("Mary", 52)
     personStuff(mary, "Stephen")
 }
 
@@ -34,15 +36,15 @@ fun personStuff(p: Person, friend: String) {
 
 fun listThings() {
 
-    var arr = arrayOf(1, 2, 3, 4, 5)
+    val arr = arrayOf(1, 2, 3, 4, 5)
     println(arr.contentToString())
 
     val arrLis = arrayListOf<String>("One", "Two", "Three", "Four", "Five")
     val arrLis2 = arrayListOf<String>("Six", "Seven", "Eight", "Nine", "Ten")
-    var arrLis3 = arrLis + arrLis2
+    val arrLis3 = arrLis + arrLis2
     println(arrLis3)
 
-    var ran = 1..10
+    val ran = 1..10
     for (i in ran) print("$i ")
 }
 

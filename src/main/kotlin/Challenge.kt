@@ -1,3 +1,4 @@
+import models.Book
 import java.util.*
 
 class Challenge {
@@ -20,7 +21,7 @@ class Challenge {
 
         @JvmStatic
         fun two() {
-            var sum: Long = 0;
+            var sum: Long = 0
             for (i in 100..100_000L) {
                 sum += i
             }
@@ -29,7 +30,7 @@ class Challenge {
 
         @JvmStatic
         fun three() {
-            var books = arrayListOf<String>("Do Androids Dream of Electric Sheep",
+            val books = arrayListOf<String>("Do Androids Dream of Electric Sheep",
                 "LOTR", "We Can Remember It for You Wholesale")
 
             for (book in books) {
@@ -40,6 +41,20 @@ class Challenge {
                     println()
                 }
             }
+        }
+
+        @JvmStatic
+        fun four() {
+            val book = Book("Do Androids Dream of Electric Sheep", "Philip K. Dick", 1968, false)
+            println(book)
+
+            println("${book.title} is borrowed ${book.borrowed}")
+            book.borrowBook()
+            book.borrowBook()
+            println("${book.title} is borrowed ${book.borrowed}")
+            book.returnBook()
+            book.returnBook()
+            println("${book.title} is borrowed ${book.borrowed}")
         }
     }
 }
