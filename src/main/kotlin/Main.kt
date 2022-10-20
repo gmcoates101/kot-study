@@ -8,12 +8,12 @@ fun main(args: Array<String>) {
     persons()
     println()
 
-//    Challenge.one()
-//    println()
-//    Challenge.two()
-//    println()
-//    Challenge.three()
-//    println()
+    Challenge.one()
+    println()
+    Challenge.two()
+    println()
+    Challenge.three()
+    println()
     Challenge.four()
     println()
 }
@@ -21,7 +21,6 @@ fun main(args: Array<String>) {
 fun persons() {
     val gary = Person("Gary", 51)
     personStuff(gary, "Satya")
-    //gary.age = 21
     val mary = Person("Mary", 52)
     personStuff(mary, "Stephen")
 }
