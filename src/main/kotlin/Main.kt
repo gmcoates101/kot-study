@@ -1,4 +1,5 @@
 import models.*
+import java.awt.Color
 
 fun main(args: Array<String>) {
 
@@ -11,6 +12,9 @@ fun main(args: Array<String>) {
     houses()
     println()
 
+    cars()
+    println()
+
     println("CHALLENGES")
     Challenge.one()
     println()
@@ -20,6 +24,13 @@ fun main(args: Array<String>) {
     println()
     Challenge.four()
     println()
+    Challenge.five()
+    println()
+}
+
+fun cars() {
+    var car = Car(Colour.BLUE)
+    println(car)
 }
 
 fun houses() {

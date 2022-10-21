@@ -1,4 +1,4 @@
-import models.Book
+import models.*
 import java.util.*
 
 class Challenge {
@@ -30,10 +30,10 @@ class Challenge {
 
         @JvmStatic
         fun three() {
-            val books = arrayListOf<String>("Do Androids Dream of Electric Sheep",
+            val bookTitles = arrayListOf<String>("Do Androids Dream of Electric Sheep",
                 "LOTR", "We Can Remember It for You Wholesale")
 
-            for (book in books) {
+            for (book in bookTitles) {
                 if (book.contains('e')) {
                     for (character in book) {
                         println(character)
@@ -45,16 +45,25 @@ class Challenge {
 
         @JvmStatic
         fun four() {
-            val book = Book("Do Androids Dream of Electric Sheep", "Philip K. Dick", 1968, false)
+            val book = Book("Do Androids Dream of Electric Sheep", "Sci-Fi", 1968, "Philip K. Dick")
             println(book)
 
             println("${book.title} is borrowed ${book.borrowed}")
-            book.borrowBook()
-            book.borrowBook()
+            book.borrow()
+            book.borrow()
             println("${book.title} is borrowed ${book.borrowed}")
-            book.returnBook()
-            book.returnBook()
+            book.returnItem()
+            book.returnItem()
             println("${book.title} is borrowed ${book.borrowed}")
+        }
+
+        @JvmStatic
+        fun five() {
+            val book = Book("Do Androids Dream of Electric Sheep", "Sci-Fi", 1968, "Philip K. Dick")
+            println(book)
+
+            val dvd = Dvd("Blade Runner", "Sci-Fi", 1982, (117 * 60))
+            println(dvd)
         }
     }
 }
