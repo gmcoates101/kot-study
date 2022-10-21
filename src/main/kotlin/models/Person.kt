@@ -11,11 +11,11 @@ open class Person {
     constructor(name: String, age: Int) {
         this.name = name
         this.age = age
-        this.year = Calendar.getInstance().get(Calendar.YEAR)
-        yearOfBirth = year - age
+        this.currentYear = Calendar.getInstance().get(Calendar.YEAR)
+        yearOfBirth = currentYear - age
     }
 
-    private val year: Int
+    private val currentYear: Int
 
     fun speak() {
         println("Hello")
