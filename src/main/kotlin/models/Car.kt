@@ -1,8 +1,14 @@
 package models
 
-class Car : Driveable {
+class Car : Driveable, Buildable {
+
+    override var buildTimeDays: Int = 100
 
     override fun drive() {
-        TODO("Not yet implemented")
+        println("Driving")
+    }
+
+    override fun build() {
+        println("Car built")
     }
 }
