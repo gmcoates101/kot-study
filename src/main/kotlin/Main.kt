@@ -1,5 +1,4 @@
-import models.House
-import models.Person
+import models.*
 
 fun main(args: Array<String>) {
 
@@ -33,6 +32,9 @@ fun persons() {
     personStuff(gary, "Satya")
     val mary = Person("Mary", 52)
     personStuff(mary, "Stephen")
+    val ady = Student("Ady", 29, "10193T004")
+    personStuff(ady, "Rach")
+    ady.print()
 }
 
 fun personStuff(p: Person, friend: String) {
