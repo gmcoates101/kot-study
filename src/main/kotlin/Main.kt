@@ -1,3 +1,4 @@
+import models.House
 import models.Person
 
 fun main(args: Array<String>) {
@@ -5,9 +6,13 @@ fun main(args: Array<String>) {
     listThings()
     println()
     println()
+
     persons()
+
+    houses()
     println()
 
+    println("CHALLENGES")
     Challenge.one()
     println()
     Challenge.two()
@@ -16,6 +21,11 @@ fun main(args: Array<String>) {
     println()
     Challenge.four()
     println()
+}
+
+fun houses() {
+    val house = House(colour = "Green", height = 100.1)
+    house.print()
 }
 
 fun persons() {
