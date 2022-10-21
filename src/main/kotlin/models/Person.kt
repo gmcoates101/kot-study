@@ -2,14 +2,20 @@ package models
 
 import java.util.Calendar
 
-open class Person(open val name: String, open var age: Int) {
+open class Person {
 
-    var yearOfBirth: Int = 0
+    open val name: String
+    open var age: Int
+    val yearOfBirth: Int
 
-    init {
-        val year: Int = Calendar.getInstance().get(Calendar.YEAR);
+    constructor(name: String, age: Int) {
+        this.name = name
+        this.age = age
+        this.year = Calendar.getInstance().get(Calendar.YEAR)
         yearOfBirth = year - age
     }
+
+    private val year: Int
 
     fun speak() {
         println("Hello")
