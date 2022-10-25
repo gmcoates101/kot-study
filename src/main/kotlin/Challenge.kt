@@ -31,9 +31,10 @@ class Challenge {
 
         @JvmStatic
         fun three() {
-            val bookTitles = arrayListOf<String>(
+            val bookTitles = arrayListOf(
                 "Do Androids Dream of Electric Sheep",
-                "LOTR", "We Can Remember It for You Wholesale"
+                "Kotlin in Action",
+                "We Can Remember It for You Wholesale"
             )
 
             for (book in bookTitles) {
@@ -71,25 +72,15 @@ class Challenge {
 
         @JvmStatic
         fun six() {
-            var ipmap = mutableMapOf<String, Int>()
+            val ipToCount = mutableMapOf<String, Int>()
 
             File("60.ips.txt").forEachLine {
-                var i = ipmap.getOrDefault(it, 0)
-                ipmap.put(it, ++i)
+                var i = ipToCount.getOrDefault(it, 0)
+                ipToCount[it] = ++i
             }
 
-            val (maxIp, maxCount) = ipmap.entries.maxBy { it.value }!!
+            val (maxIp, maxCount) = ipToCount.entries.maxBy { it.value }
 
-//            var maxIp = ipmap.keys.first()
-//            var maxCount = 0
-//            for((ip, count) in ipmap.entries) {
-//                if (count > maxCount) {
-//                    maxCount = count
-//                    maxIp = ip
-//                }
-//            }
-
-            // ipmap.forEach { (k, v) -> println("$k: $v") }
             println("IP $maxIp has $maxCount entries.")
         }
     }
