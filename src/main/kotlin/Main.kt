@@ -1,5 +1,4 @@
 import models.*
-import java.awt.Color
 
 fun main(args: Array<String>) {
 
@@ -25,6 +24,8 @@ fun main(args: Array<String>) {
     Challenge.four()
     println()
     Challenge.five()
+    println()
+    Challenge.six()
     println()
 }
 

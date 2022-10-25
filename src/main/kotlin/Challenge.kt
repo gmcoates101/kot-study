@@ -1,4 +1,5 @@
 import models.*
+import java.io.File
 import java.util.*
 
 class Challenge {
@@ -30,8 +31,10 @@ class Challenge {
 
         @JvmStatic
         fun three() {
-            val bookTitles = arrayListOf<String>("Do Androids Dream of Electric Sheep",
-                "LOTR", "We Can Remember It for You Wholesale")
+            val bookTitles = arrayListOf<String>(
+                "Do Androids Dream of Electric Sheep",
+                "LOTR", "We Can Remember It for You Wholesale"
+            )
 
             for (book in bookTitles) {
                 if (book.contains('e')) {
@@ -65,5 +68,30 @@ class Challenge {
             val dvd = Dvd("Blade Runner", "Sci-Fi", 1982, (117 * 60))
             println(dvd)
         }
+
+        @JvmStatic
+        fun six() {
+            var ipmap = mutableMapOf<String, Int>()
+
+            File("60.ips.txt").forEachLine {
+                var i = ipmap.getOrDefault(it, 0)
+                ipmap.put(it, ++i)
+            }
+
+            val (maxIp, maxCount) = ipmap.entries.maxBy { it.value }!!
+
+//            var maxIp = ipmap.keys.first()
+//            var maxCount = 0
+//            for((ip, count) in ipmap.entries) {
+//                if (count > maxCount) {
+//                    maxCount = count
+//                    maxIp = ip
+//                }
+//            }
+
+            // ipmap.forEach { (k, v) -> println("$k: $v") }
+            println("IP $maxIp has $maxCount entries.")
+        }
     }
 }
+

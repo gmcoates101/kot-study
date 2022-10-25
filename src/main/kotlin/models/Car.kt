@@ -1,12 +1,8 @@
 package models
 
-enum class Colour {
-    RED,
-    GREEN,
-    BLUE
-}
+import java.util.*
 
-class Car(val colour: Colour) : Driveable, Buildable {
+class Car(private val colour: Colour) : Driveable, Buildable {
 
     override var buildTimeDays: Int = 100
 
@@ -19,7 +15,11 @@ class Car(val colour: Colour) : Driveable, Buildable {
     }
 
     override fun toString(): String {
-        var name = colour.name.capitalize()
+        var name = capFirst(colour.name)
         return "Car [colour=$name}]"
+    }
+
+    private fun capFirst(value: String): String {
+        return value.lowercase().replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
     }
 }
