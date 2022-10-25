@@ -1,6 +1,6 @@
 import models.*
 
-fun main(args: Array<String>) {
+fun main() {
 
     listThings()
     println()
@@ -30,7 +30,7 @@ fun main(args: Array<String>) {
 }
 
 fun cars() {
-    var car = Car(Colour.BLUE)
+    val car = Car(Colour.BLUE)
     println(car)
 }
 
@@ -45,7 +45,7 @@ fun persons() {
     val mary = Person("Mary", 52)
     personStuff(mary, "Stephen")
     val ady = Student("Ady", 29, "10193T004")
-    personStuff(ady, "Rach")
+    personStuff(ady, "Rachael")
     ady.print()
 }
 
@@ -62,8 +62,8 @@ fun listThings() {
     val arr = arrayOf(1, 2, 3, 4, 5)
     println(arr.contentToString())
 
-    val arrLis = arrayListOf<String>("One", "Two", "Three", "Four", "Five")
-    val arrLis2 = arrayListOf<String>("Six", "Seven", "Eight", "Nine", "Ten")
+    val arrLis = arrayListOf("One", "Two", "Three", "Four", "Five")
+    val arrLis2 = arrayListOf("Six", "Seven", "Eight", "Nine", "Ten")
     val arrLis3 = arrLis + arrLis2
     println(arrLis3)
 
