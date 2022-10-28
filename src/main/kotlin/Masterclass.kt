@@ -1,3 +1,6 @@
+import models.MobilePhone
+import data.Robot
+
 class Masterclass {
 
     companion object {
@@ -15,8 +18,31 @@ class Masterclass {
         }
 
         @JvmStatic
-        fun chap45(vararg a: Double): Double {
-            return a.sum() / a.size
+        fun chap45(vararg a: Double): Double = a.sum() / a.size
+
+        @JvmStatic
+        fun chap55() {
+            val ip = MobilePhone("iOS", "Apple", "X")
+            val and = MobilePhone("Android Lollipop", "Marshall", "London")
+            val sam = MobilePhone("Android S", "Samsung", "A52s 5G")
+        }
+
+        @JvmStatic
+        fun chap61() {
+            val robot = Robot("Robbie")
+            val rob = Robot("Robbie")
+
+            println("$robot - $rob")
+            println(robot == rob)
+            robot.name = "Marvin"
+            println("$robot - $rob")
+            println(robot == rob)
+        }
+
+        @JvmStatic
+        fun chap62() {
+            val ip = MobilePhone("iOS", "Apple", "X", 25)
+            ip.chargeBattery(40)
         }
     }
 }

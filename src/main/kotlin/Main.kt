@@ -2,10 +2,23 @@ import models.*
 
 fun main() {
 
+    val sum: (Int, Int) -> Int = { a: Int, b: Int -> a + b}
+    println(sum(8, 9).toString())
+
     Masterclass.chap24()
     println()
 
     println(Masterclass.chap45(33.9, 48.3, 5.6, 6.9, 7.8))
+    println()
+
+    Masterclass.chap55()
+    println()
+
+    Masterclass.chap61()
+    println()
+
+    Masterclass.chap62()
+    println()
 
     listThings()
     println()
