@@ -2,6 +2,9 @@ import models.*
 
 fun main() {
 
+    Masterclass.chap24()
+    println()
+
     listThings()
     println()
     println()
@@ -19,8 +22,8 @@ fun main() {
     println()
     Challenge.two()
     println()
-    Challenge.three()
-    println()
+//    Challenge.three()
+//    println()
     Challenge.four()
     println()
     Challenge.five()
@@ -42,8 +45,10 @@ fun houses() {
 fun persons() {
     val gary = Person("Gary", 51)
     personStuff(gary, "Satya")
+
     val mary = Person("Mary", 52)
     personStuff(mary, "Stephen")
+
     val ady = Student("Ady", 29, "10193T004")
     personStuff(ady, "Rachael")
     ady.print()
