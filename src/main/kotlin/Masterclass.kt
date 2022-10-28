@@ -13,5 +13,10 @@ class Masterclass {
             val c: Char = 'a'
             println("$s : $f : $d : $b : $sh : $l : $boo : $c")
         }
+
+        @JvmStatic
+        fun chap45(vararg a: Double): Double {
+            return a.sum() / a.size
+        }
     }
 }

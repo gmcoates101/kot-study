@@ -5,6 +5,8 @@ fun main() {
     Masterclass.chap24()
     println()
 
+    println(Masterclass.chap45(33.9, 48.3, 5.6, 6.9, 7.8))
+
     listThings()
     println()
     println()
