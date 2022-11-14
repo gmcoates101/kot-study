@@ -1,3 +1,5 @@
+package worksheets
+
 var price = 34.01
 var items = 3
 var totalPrice = price * items

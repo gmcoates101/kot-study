@@ -1,3 +1,5 @@
+package worksheets
+
 val cats = 2
 println(cats::class.java)
 val longCats = cats.toLong()
