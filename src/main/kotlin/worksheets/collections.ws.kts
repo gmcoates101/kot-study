@@ -24,8 +24,7 @@ println(countOf)
 println(countOf.keys::class.java)
 println(countOf.values::class.java)
 
-var attendance = hashMapOf(Pair("23 Sept", 2837), Pair("24 Sept", 3726), Pair("25 Sept", 6253))
+var attendance = hashMapOf(Pair("23 Sept", 2837), Pair("24 Sept", 3726), Pair("25 Sept", 6253), Pair("c", null))
 attendance["26 Sept"] = 6354
-println("${attendance["25 Sept"]} attended on the 25 Sept")
-println("${attendance["26 Sept"]} attended on the 26 Sept")
+println("${attendance["25 Sept"]!!.plus(attendance["26 Sept"]!!)} attended on the 25th and 26th Sept")
 println("Do we have data for 22 Sept? ${attendance.containsKey("22 Sept")}")
