@@ -2,7 +2,7 @@ package hangman
 
 import kotlin.random.Random
 
-val words = listOf("guitar", "bridge", "football", "computer", "steak", "apples", "fridge", "truck", "orange", "java", "spring")
+val words = listOf("guitar", "bridge", "football", "computer", "steak", "apples", "fridge", "prague", "truck", "orange", "java", "spring", "beer", "airport", "frisbee", "zapper", "zebra")
 val guesses = arrayListOf<Char>()
 var word = ""
 var remainingGuesses = 6
@@ -10,14 +10,17 @@ var mistakes = 0
 
 fun main(args: Array<String>) {
     setupGame()
+    gameLoop()
+
+    if (mistakes == 6) {
+        printGameStatus()
+    } else {
+        setFree()
+    }
+    println("The word was $word")
 }
 
-fun setupGame() {
-    var word = words[Random.nextInt(words.size)].uppercase()
-    println(word)
-    for (i in word.indices)
-        guesses.add('_')
-
+fun gameLoop() {
     var gameOver = false
 
     do {
@@ -41,19 +44,16 @@ fun setupGame() {
                 println("Sorry that's not found")
                 remainingGuesses--
                 mistakes++
-
                 gameOver = mistakes == 6
             }
         }
-
     } while (!gameOver)
+}
 
-    if (mistakes == 6) {
-        printGameStatus()
-    } else {
-        setFree()
-    }
-    println("The word was $word")
+fun setupGame() {
+    word = words[Random.nextInt(words.size)].uppercase()
+    for (i in word.indices)
+        guesses.add('_')
 }
 
 fun printGameStatus() {
