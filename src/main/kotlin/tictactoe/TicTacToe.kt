@@ -2,7 +2,7 @@ package tictactoe
 
 var board = arrayListOf<ArrayList<String>>()
 
-fun main(args: Array<String>) {
+fun main() {
     boardSetup()
     printBoard()
 
@@ -10,12 +10,12 @@ fun main(args: Array<String>) {
 
     do {
         println("Please enter your position (e.g. 1, 1) or Q to quit")
-        var input = readln()
+        val input = readln()
 
         try {
             val positions = input.split(",")
-            var x = positions[0].trim().toInt()
-            var y = positions[1].trim().toInt()
+            val x = positions[0].trim().toInt()
+            val y = positions[1].trim().toInt()
 
             if (board[x-1][y-1] == "") {
                 board[x-1][y-1] = "X"
