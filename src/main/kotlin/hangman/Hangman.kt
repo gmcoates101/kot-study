@@ -143,7 +143,7 @@ fun print5Mistakes() {
 fun print6Mistakes() {
     println("  |------|-")
     println("  |      | ")
-    println("  |      O ")
+    println("  |      0 ")
     println("  |     /|\\")
     println("  |      | ")
     println("  |     / \\")
